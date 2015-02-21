@@ -1,5 +1,4 @@
-package interfaces;
-
+package main.java.interfaces;
 import javax.ejb.Remote;
 
 @Remote
