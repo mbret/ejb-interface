@@ -5,15 +5,17 @@ public class UserShared {
 	private int id;
 	private String mail;
 	private String password;
-
+    private boolean subscriber;
+            
 	public UserShared() {
 		super();
 	}
 
-	public UserShared(String mail, String password) {
+	public UserShared(String mail, String password, boolean subscriber) {
 		super();
 		this.mail = mail;
 		this.password = password;
+        this.subscriber = subscriber;
 	}
 
 	public int getId() {
@@ -40,4 +42,11 @@ public class UserShared {
 		this.password = password;
 	}
 
+    public boolean isSubscriber() {
+        return subscriber;
+    }
+
+    public void setSubscriber(boolean subscriber) {
+        this.subscriber = subscriber;
+    }
 }
