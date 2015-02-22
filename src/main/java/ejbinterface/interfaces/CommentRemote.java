@@ -9,4 +9,6 @@ import java.util.List;
 public interface CommentRemote {
 
     public List<CommentShared> findAllByArticle(Object id);
+    
+    public CommentShared save(String content, Object userID, Object articleID);
 }
