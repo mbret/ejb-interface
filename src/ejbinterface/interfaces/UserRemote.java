@@ -1,11 +1,16 @@
 package ejbinterface.interfaces;
 
 import javax.ejb.Remote;
-import ejbinterfaces.entities.User;
+
+import ejbinterfaces.entities.UserShared;
 
 @Remote
 public interface UserRemote {
-	
-	public User getUser(String mail, String password);
+
+	// Authentification
+	public UserShared getUser(String mail, String password);
+
+	// Inscription
+	public boolean createUser(String mail, String password);
 
 }

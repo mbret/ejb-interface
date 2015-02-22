@@ -1,17 +1,17 @@
 package ejbinterfaces.entities;
 
-public class Comment {
+public class CommentShared {
 
 	private int id;
 	private String content;
-	private Article article;
-	private User auteur;
+	private ArticleShared article;
+	private UserShared auteur;
 
-	public Comment() {
+	public CommentShared() {
 		super();
 	}
 
-	public Comment(int id, String content, Article article, User auteur) {
+	public CommentShared(int id, String content, ArticleShared article, UserShared auteur) {
 		super();
 		this.id = id;
 		this.content = content;
@@ -35,19 +35,19 @@ public class Comment {
 		this.content = content;
 	}
 
-	public Article getArticle() {
+	public ArticleShared getArticle() {
 		return article;
 	}
 
-	public void setArticle(Article article) {
+	public void setArticle(ArticleShared article) {
 		this.article = article;
 	}
 
-	public User getAuteur() {
+	public UserShared getAuteur() {
 		return auteur;
 	}
 
-	public void setAuteur(User auteur) {
+	public void setAuteur(UserShared auteur) {
 		this.auteur = auteur;
 	}
 

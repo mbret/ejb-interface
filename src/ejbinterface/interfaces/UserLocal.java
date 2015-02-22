@@ -1,11 +1,15 @@
 package ejbinterface.interfaces;
 
 import javax.ejb.Local;
-import ejbinterfaces.entities.User;
+import ejbinterfaces.entities.UserShared;
 
 @Local
 public interface UserLocal {
-	
-	public User getUser(String mail, String password);
+
+	// Authentification
+	public UserShared getUser(String mail, String password);
+
+	// Inscription
+	public boolean createUser(String mail, String password);
 
 }

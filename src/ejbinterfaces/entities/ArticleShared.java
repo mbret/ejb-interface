@@ -1,17 +1,17 @@
 package ejbinterfaces.entities;
 
-public class Article {
+public class ArticleShared {
 
 	private int id;
 	private String titre;
 	private String contenu;
-	private User auteur;
+	private UserShared auteur;
 
-	public Article() {
+	public ArticleShared() {
 		super();
 	}
 
-	public Article(int id, String titre, String contenu, User auteur) {
+	public ArticleShared(int id, String titre, String contenu, UserShared auteur) {
 		super();
 		this.id = id;
 		this.titre = titre;
@@ -43,11 +43,11 @@ public class Article {
 		this.contenu = contenu;
 	}
 
-	public User getAuteur() {
+	public UserShared getAuteur() {
 		return auteur;
 	}
 
-	public void setAuteur(User auteur) {
+	public void setAuteur(UserShared auteur) {
 		this.auteur = auteur;
 	}
 	

@@ -1,18 +1,17 @@
 package ejbinterfaces.entities;
 
-public class User {
+public class UserShared {
 
 	private int id;
 	private String mail;
 	private String password;
 
-	public User() {
+	public UserShared() {
 		super();
 	}
 
-	public User(int id, String mail, String password) {
+	public UserShared(String mail, String password) {
 		super();
-		this.id = id;
 		this.mail = mail;
 		this.password = password;
 	}
