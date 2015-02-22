@@ -90,7 +90,7 @@ public class ArticleShared extends ModelAbstract{
         this.titre = ((Article)entity).getTitle();
         this.contenu = ((Article)entity).getContent();
         try {
-			this.auteur = ModelFactory.convert(UserShared.class, ((Article)entity).getAuteur());
+			this.auteur = ModelFactory.convert(UserShared.class, ((Article)entity).getUser());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
