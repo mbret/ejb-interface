@@ -26,7 +26,14 @@ public class UserShared extends ModelAbstract {
         this.subscriber = subscriber;
 	}
 
-	public int getId() {
+    public UserShared(int id, String mail, String password, boolean subscriber) {
+        this.id = id;
+        this.mail = mail;
+        this.password = password;
+        this.subscriber = subscriber;
+    }
+
+    public int getId() {
 		return id;
 	}
 
