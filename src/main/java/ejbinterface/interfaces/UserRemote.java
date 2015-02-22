@@ -19,5 +19,4 @@ public interface UserRemote{
     
     public boolean emailExist(String email);
     
-    public boolean test();
 }
