@@ -12,6 +12,7 @@ public class ModelFactory {
 
     public static <H extends ModelAbstract> List<H> convert(final Class<H> modelClass, List entities) throws Exception {
         ArrayList<H> beans = new ArrayList<H>();
+        if( entities == null || entities.isEmpty() ) return beans;
         for(Object model : entities){
             beans.add( ModelFactory.convert(modelClass, model) );
         }
