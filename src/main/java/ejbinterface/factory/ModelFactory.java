@@ -3,13 +3,14 @@ package ejbinterface.factory;
 import ejbinterface.model.ModelAbstract;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Maxime on 2/22/2015.
  */
 public class ModelFactory {
 
-    public static <H extends ModelAbstract> ArrayList<H> convert(final Class<H> modelClass, ArrayList entities) throws Exception {
+    public static <H extends ModelAbstract> List<H> convert(final Class<H> modelClass, List entities) throws Exception {
         ArrayList<H> beans = new ArrayList<H>();
         for(Object model : entities){
             beans.add( ModelFactory.convert(modelClass, model) );

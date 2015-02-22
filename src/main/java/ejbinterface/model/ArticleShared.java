@@ -98,7 +98,14 @@ public class ArticleShared extends ModelAbstract{
         this.date = ((Article)entity).getDate();
     }
 
-    public List<CommentShared> getComments() {
+    @Override
+	public String toString() {
+		return "ArticleShared [id=" + id + ", titre=" + titre + ", contenu="
+				+ contenu + ", auteur=" + auteur + ", date=" + date
+				+ ", comments=" + comments + "]";
+	}
+
+	public List<CommentShared> getComments() {
         return comments;
     }
 
