@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Remote
-public interface ArticleRemote {
+public interface ArticleRemote{
 	
     public ArticleShared save(String title, String content, Object userID);
     
