@@ -13,5 +13,7 @@ public interface UserRemote {
 	// Inscription
 	public UserShared createUser(String mail, String password);
 
+    public boolean emailExist(String email);
+    
     public boolean test();
 }
