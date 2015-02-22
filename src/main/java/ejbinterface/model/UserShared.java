@@ -11,7 +11,11 @@ public class UserShared extends ModelAbstract {
 		super();
 	}
 
-	public UserShared(String mail, String password, boolean subscriber) {
+    public UserShared(int id) {
+        this.id = id;
+    }
+
+    public UserShared(String mail, String password, boolean subscriber) {
 		super();
 		this.mail = mail;
 		this.password = password;
