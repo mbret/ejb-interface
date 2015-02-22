@@ -1,7 +1,6 @@
 package ejbinterface.interfaces;
 
 import javax.ejb.Remote;
-
 import ejbinterface.model.UserShared;
 
 @Remote
