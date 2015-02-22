@@ -11,4 +11,6 @@ import java.util.List;
 public interface ArticleRemote {
 	public boolean createArticle(String title, String content);
     public List<ArticleShared> findAll();
+    
+    public ArticleShared findOne(Object id);
 }
