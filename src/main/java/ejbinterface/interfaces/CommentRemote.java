@@ -8,7 +8,7 @@ import java.util.List;
 @Remote
 public interface CommentRemote {
 
-    public List<CommentShared> findAllByArticle(Object id);
+    public List<CommentShared> findAllByArticle(Object id) throws Exception;
     
     // date should be generated
     public CommentShared save(String content, Object userID, Object articleID);
