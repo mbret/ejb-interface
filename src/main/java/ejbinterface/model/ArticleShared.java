@@ -2,7 +2,9 @@ package ejbinterface.model;
 
 import ejbpersistance.entities.Article;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class ArticleShared extends ModelAbstract{
 
@@ -11,18 +13,20 @@ public class ArticleShared extends ModelAbstract{
 	private String contenu;
 	private UserShared auteur;
     private Date date;
+    private List<CommentShared> comments;
     
 	public ArticleShared() {
 		super();
 	}
 
-	public ArticleShared(int id, String titre, String contenu, UserShared auteur, Date date) {
+	public ArticleShared(int id, String titre, String contenu, UserShared auteur, Date date, List<CommentShared> comments) {
 		super();
 		this.id = id;
 		this.titre = titre;
 		this.contenu = contenu;
 		this.auteur = auteur;
         this.date = date;
+        this.comments = comments;
 	}
 
 	public int getId() {
@@ -69,5 +73,13 @@ public class ArticleShared extends ModelAbstract{
     public void loadFromEntity(Object entity) {
         this.id = ((Article)entity).getId();
         // ...
+    }
+
+    public List<CommentShared> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<CommentShared> comments) {
+        this.comments = comments;
     }
 }

@@ -9,5 +9,7 @@ import java.util.ArrayList;
 public interface ArticleRemote {
 
     public ArrayList<ArticleShared> findAll();
+    
+    public ArticleShared findOne(Object id);
 
 }
