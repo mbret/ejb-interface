@@ -11,6 +11,7 @@ public interface UserRemote {
 	public UserShared getUser(String mail, String password);
 
 	// Inscription
-	public boolean createUser(String mail, String password);
+	public UserShared createUser(String mail, String password);
 
+    public boolean test();
 }
