@@ -1,6 +1,6 @@
-package ejbinterface.entities;
+package ejbinterface.model;
 
-public class UserShared {
+public class UserShared extends ModelAbstract {
 
 	private int id;
 	private String mail;
@@ -48,5 +48,10 @@ public class UserShared {
 
     public void setSubscriber(boolean subscriber) {
         this.subscriber = subscriber;
+    }
+
+    @Override
+    public void loadFromEntity(Object entity) {
+
     }
 }

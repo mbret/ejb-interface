@@ -1,8 +1,8 @@
-package ejbinterface.entities;
+package ejbinterface.model;
 
 import java.util.Date;
 
-public class CommentShared {
+public class CommentShared extends ModelAbstract{
 
 	private int id;
 	private String content;
@@ -61,5 +61,10 @@ public class CommentShared {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    @Override
+    public void loadFromEntity(Object entity) {
+
     }
 }

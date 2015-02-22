@@ -1,7 +1,6 @@
 package ejbinterface.interfaces;
 
-import ejbinterface.entities.ArticleShared;
-import ejbinterface.entities.UserShared;
+import ejbinterface.model.ArticleShared;
 
 import javax.ejb.Remote;
 import java.util.ArrayList;

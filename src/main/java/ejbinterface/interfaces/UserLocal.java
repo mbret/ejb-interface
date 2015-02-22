@@ -1,7 +1,7 @@
 package ejbinterface.interfaces;
 
 import javax.ejb.Local;
-import ejbinterface.entities.UserShared;
+import ejbinterface.model.UserShared;
 
 @Local
 public interface UserLocal {

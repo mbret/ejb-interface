@@ -1,8 +1,10 @@
-package ejbinterface.entities;
+package ejbinterface.model;
+
+import ejbpersistance.entities.Article;
 
 import java.util.Date;
 
-public class ArticleShared {
+public class ArticleShared extends ModelAbstract{
 
 	private int id;
 	private String titre;
@@ -61,5 +63,11 @@ public class ArticleShared {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    @Override
+    public void loadFromEntity(Object entity) {
+        this.id = ((Article)entity).getId();
+        // ...
     }
 }
