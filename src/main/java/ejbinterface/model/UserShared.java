@@ -1,5 +1,9 @@
 package ejbinterface.model;
 
+import ejbinterface.factory.ModelFactory;
+import ejbpersistance.entities.Article;
+import ejbpersistance.entities.User;
+
 public class UserShared extends ModelAbstract {
 
 	private int id;
@@ -56,6 +60,9 @@ public class UserShared extends ModelAbstract {
 
     @Override
     public void loadFromEntity(Object entity) {
-
+        this.id = ((User)entity).getId();
+        this.mail = ((User)entity).getEmail();
+        this.password = ((User)entity).getPassword();
+        this.subscriber = ((User)entity).getSubscriber();
     }
 }

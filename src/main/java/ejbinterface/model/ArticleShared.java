@@ -1,5 +1,6 @@
 package ejbinterface.model;
 
+import ejbinterface.factory.ModelFactory;
 import ejbpersistance.entities.Article;
 
 import java.util.ArrayList;
@@ -86,7 +87,15 @@ public class ArticleShared extends ModelAbstract{
     @Override
     public void loadFromEntity(Object entity) {
         this.id = ((Article)entity).getId();
-        // ...
+        this.titre = ((Article)entity).getTitle();
+        this.contenu = ((Article)entity).getContent();
+        try {
+			this.auteur = ModelFactory.convert(UserShared.class, ((Article)entity).getAuteur());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        this.date = ((Article)entity).getDate();
     }
 
     public List<CommentShared> getComments() {
