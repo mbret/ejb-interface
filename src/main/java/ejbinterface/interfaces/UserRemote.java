@@ -13,7 +13,7 @@ public interface UserRemote{
     public UserShared findOne(Object id);
     
 	// Inscription
-	public UserShared save(String mail, String password);
+	public UserShared save(String mail, String password) throws Exception;
 
     public void update(UserShared user);
     
