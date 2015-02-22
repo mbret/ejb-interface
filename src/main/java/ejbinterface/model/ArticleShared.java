@@ -19,7 +19,15 @@ public class ArticleShared extends ModelAbstract{
 		super();
 	}
 
-	public ArticleShared(int id, String titre, String contenu, UserShared auteur, Date date, List<CommentShared> comments) {
+    public ArticleShared(int id, String titre, String contenu, UserShared auteur, Date date) {
+        this.id = id;
+        this.titre = titre;
+        this.contenu = contenu;
+        this.auteur = auteur;
+        this.date = date;
+    }
+
+    public ArticleShared(int id, String titre, String contenu, UserShared auteur, Date date, List<CommentShared> comments) {
 		super();
 		this.id = id;
 		this.titre = titre;
