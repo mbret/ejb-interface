@@ -11,7 +11,7 @@ import java.util.List;
 @Remote
 public interface ArticleRemote {
 	
-    public ArticleShared save(String title, String content, UserShared user);
+    public ArticleShared save(String title, String content, Object userID);
     
     public List<ArticleShared> findAll();
     

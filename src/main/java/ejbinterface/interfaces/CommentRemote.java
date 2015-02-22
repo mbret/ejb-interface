@@ -10,5 +10,6 @@ public interface CommentRemote {
 
     public List<CommentShared> findAllByArticle(Object id);
     
+    // date should be generated
     public CommentShared save(String content, Object userID, Object articleID);
 }
