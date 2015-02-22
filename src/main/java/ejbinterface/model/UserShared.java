@@ -57,6 +57,10 @@ public class UserShared extends ModelAbstract {
     public void setSubscriber(boolean subscriber) {
         this.subscriber = subscriber;
     }
+    
+    public boolean getSubscriber(){
+    	return this.subscriber;
+    }
 
     @Override
     public void loadFromEntity(Object entity) {
@@ -65,4 +69,10 @@ public class UserShared extends ModelAbstract {
         this.password = ((User)entity).getPassword();
         this.subscriber = ((User)entity).getSubscriber();
     }
+
+	@Override
+	public String toString() {
+		return "UserShared [id=" + id + ", mail=" + mail + ", password="
+				+ password + ", subscriber=" + subscriber + "]";
+	}
 }
