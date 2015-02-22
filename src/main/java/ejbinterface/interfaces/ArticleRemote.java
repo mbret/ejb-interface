@@ -13,7 +13,7 @@ public interface ArticleRemote{
 	
     public ArticleShared save(String title, String content, Object userID) throws Exception;
     
-    public List<ArticleShared> findAll();
+    public List<ArticleShared> findAll() throws Exception;
     
-    public ArticleShared findOne(Object id);
+    public ArticleShared findOne(Object id) throws Exception;
 }

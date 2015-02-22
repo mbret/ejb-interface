@@ -5,7 +5,4 @@ import ejbinterface.model.UserShared;
 
 @Local
 public interface UserLocal {
-
-
-
 }

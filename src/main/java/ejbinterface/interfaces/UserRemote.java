@@ -7,13 +7,12 @@ import ejbinterface.model.UserShared;
 @Remote
 public interface UserRemote{
 
-	// Authentification
 	public UserShared findOne(String mail, String password) throws Exception;
 
-    public UserShared findOne(Object id);
+    public UserShared findOne(Object id) throws Exception;
     
 	// Inscription
-	public UserShared save(String mail, String password);
+	public UserShared save(String mail, String password) throws Exception;
 
     public void update(UserShared user);
     
