@@ -2,7 +2,19 @@ package ejbinterface.model;
 
 import java.util.Date;
 
+import ejbinterface.factory.ModelFactory;
+import ejbpersistance.entities.Article;
+import ejbpersistance.entities.Comment;
+import ejbpersistance.entities.User;
+
 public class CommentShared extends ModelAbstract{
+
+	@Override
+	public String toString() {
+		return "CommentShared [id=" + id + ", content=" + content
+				+ ", article=" + article + ", auteur=" + auteur + ", date="
+				+ date + "]";
+	}
 
 	private int id;
 	private String content;
@@ -65,6 +77,15 @@ public class CommentShared extends ModelAbstract{
 
     @Override
     public void loadFromEntity(Object entity) {
-
+    	this.id = ((Comment)entity).getId();
+		this.content = ((Comment)entity).getContent();
+		try {
+			this.article = ModelFactory.convert(ArticleShared.class, ((Comment)entity).getArticle());
+			this.auteur = ModelFactory.convert(UserShared.class, ((Comment)entity).getUser());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        this.date = ((Comment)entity).getDate();
     }
 }
