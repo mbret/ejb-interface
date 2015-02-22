@@ -1,22 +1,26 @@
 package ejbinterface.entities;
 
+import java.util.Date;
+
 public class CommentShared {
 
 	private int id;
 	private String content;
 	private ArticleShared article;
 	private UserShared auteur;
-
+    private Date date;
+    
 	public CommentShared() {
 		super();
 	}
 
-	public CommentShared(int id, String content, ArticleShared article, UserShared auteur) {
+	public CommentShared(int id, String content, ArticleShared article, UserShared auteur, Date date) {
 		super();
 		this.id = id;
 		this.content = content;
 		this.article = article;
 		this.auteur = auteur;
+        this.date = date;
 	}
 
 	public int getId() {
@@ -51,6 +55,11 @@ public class CommentShared {
 		this.auteur = auteur;
 	}
 
-	
-	
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 }
